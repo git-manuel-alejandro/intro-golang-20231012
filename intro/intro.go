@@ -5,6 +5,11 @@ import (
 	"reflect"
 )
 
+func MultipelReturn(nombre, apellido string, edad int) (string, string, int) {
+
+	return nombre, apellido, edad
+
+}
 func Slices() {
 	var slices = make([]int, 1)
 
