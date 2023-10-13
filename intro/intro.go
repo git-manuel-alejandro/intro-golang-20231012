@@ -5,6 +5,17 @@ import (
 	"reflect"
 )
 
+func Clousures(num int) func() int {
+	var valor = num
+	var i = 0
+
+	return func() int {
+		i++
+		return valor * i
+	}
+
+}
+
 func MultipelReturn(nombre, apellido string, edad int) (string, string, int) {
 
 	return nombre, apellido, edad

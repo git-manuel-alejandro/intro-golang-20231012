@@ -6,8 +6,14 @@ import (
 )
 
 func main() {
-	nombre, apellido, edad := intro.MultipelReturn("manuel", "roa", 32)
-	fmt.Printf("%s %s tiene %d años de edad", nombre, apellido, edad)
+	var clousure = intro.Clousures(3)
+
+	for i := 1; i <= 10; i++ {
+		fmt.Printf("3 * %d = %d \n", i, clousure())
+	}
+
+	// nombre, apellido, edad := intro.MultipelReturn("manuel", "roa", 32)
+	// fmt.Printf("%s %s tiene %d años de edad", nombre, apellido, edad)
 	// intro.Slices()
 	// intro.Arreglos()
 	// intro.Iteraciones(10)
