@@ -5,6 +5,31 @@ import (
 	"reflect"
 )
 
+func Recursividad(n int) {
+	fmt.Println("valor de n : ", n)
+
+	if n > 0 {
+		n--
+		Recursividad(n)
+	}
+
+}
+
+func GoRoutines() {
+	canal := make(chan string)
+
+	go func() {
+		canal <- Imprime("manuel")
+	}()
+
+	fmt.Println(<-canal)
+
+}
+
+func Imprime(nombre string) string {
+	return "hola " + nombre
+}
+
 func Clousures(num int) func() int {
 	var valor = num
 	var i = 0
