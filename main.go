@@ -6,7 +6,8 @@ import (
 
 func main() {
 
-	intro.Recursividad(100)
+	intro.DeferPanic()
+	// intro.Recursividad(100)
 	// intro.GoRoutines()
 	// var clousure = intro.Clousures(3)
 

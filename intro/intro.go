@@ -5,6 +5,12 @@ import (
 	"reflect"
 )
 
+func DeferPanic() {
+	defer fmt.Println("am a defer print")
+	fmt.Println("am a normal print")
+	panic("am a panic print")
+}
+
 func Recursividad(n int) {
 	fmt.Println("valor de n : ", n)
 
